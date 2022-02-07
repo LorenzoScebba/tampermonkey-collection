@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            Twitch points collector
-// @version         1.0
+// @version         1.1
 // @author          Lorenzo Scebba
 // @description     A simple script to collect channel points automatically.
 // @description:it  A simple script to collect channel points automatically.
@@ -14,8 +14,17 @@
 (function () {
     'use strict';
 
+    function log(text) {
+        console.log(`[Twitch points collector] ${text}`)
+    }
+
     // Your code here...
     setInterval(() => { 
-        document.querySelector(".claimable-bonus__icon").click() 
+        var element = document.querySelector(".claimable-bonus__icon");
+        
+        if(element){
+            log("Collecting points!")
+            element.click();
+        }
     }, 10000)
 })();

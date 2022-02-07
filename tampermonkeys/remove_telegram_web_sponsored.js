@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            Telegram sponsored posts remover
-// @version         0.1
+// @version         0.2
 // @author          Lorenzo Scebba
 // @description     A simple script to remove telegram sponsored posts automagically.
 // @description:it  Uno script per rimuovere in automatico i post sponsorizzati di telegram.
@@ -13,10 +13,18 @@
 (function () {
     'use strict';
 
+    function log(text) {
+        console.log(`[Telegram sponsored posts remover] ${text}`)
+    }
+
     // Your code here...
     setInterval(() => {
         var xpath = `//span[text()="sponsored"]/../../../../..`;
         var matchingElement = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
-        matchingElement.remove();
+
+        if (matchingElement) {
+            log("Removing sponsored post!")
+            matchingElement.remove();
+        }
     }, 10000)
 })();
