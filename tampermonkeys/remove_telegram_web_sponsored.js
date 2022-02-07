@@ -1,12 +1,13 @@
 // ==UserScript==
-// @name            Twitch points collector
-// @version         1.0
+// @name            Telegram sponsored posts remover
+// @version         0.1
 // @author          Lorenzo Scebba
-// @description     A simple script to collect channel points automatically.
-// @description:it  A simple script to collect channel points automatically.
-// @include         https://www.twitch.tv/*
-// @icon            https://pbs.twimg.com/profile_images/1321508753901080580/VQEwhmaf_400x400.jpg
+// @description     A simple script to remove telegram sponsored posts automagically.
+// @description:it  Uno script per rimuovere in automatico i post sponsorizzati di telegram.
+// @include         https://web.telegram.org/z*
 // @grant           none
+// @downloadURL     https://raw.githubusercontent.com/LorenzoScebba/tampermonkey-collection/master/tampermonkeys/remove_telegram_web_sponsored.js
+// @updateURL       https://raw.githubusercontent.com/LorenzoScebba/tampermonkey-collection/master/tampermonkeys/remove_telegram_web_sponsored.js
 // ==/UserScript==
 
 (function () {
