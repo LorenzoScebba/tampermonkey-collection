@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            Reddit promoted posts remover
-// @version         0.1
+// @version         0.2
 // @author          Lorenzo Scebba
 // @description     A simple script to remove reddit promoted posts automagically.
 // @description:it  Uno script per rimuovere in automatico i post sponsorizzati di reddit.
@@ -25,5 +25,5 @@
             log("Removing promoted post!")
             matchingElement.remove();
         }
-    }, 10000)
+    }, 1000)
 })();
