@@ -5,6 +5,7 @@
 // @description     A simple script to remove telegram sponsored posts automagically.
 // @description:it  Uno script per rimuovere in automatico i post sponsorizzati di telegram.
 // @include         https://web.telegram.org/z*
+// @include         https://webk.telegram.org/*
 // @grant           none
 // @downloadURL     https://raw.githubusercontent.com/LorenzoScebba/tampermonkey-collection/master/tampermonkeys/remove_telegram_web_sponsored.js
 // @updateURL       https://raw.githubusercontent.com/LorenzoScebba/tampermonkey-collection/master/tampermonkeys/remove_telegram_web_sponsored.js
@@ -26,5 +27,5 @@
             log("Removing sponsored post!")
             matchingElement.remove();
         }
-    }, 10000)
+    }, 1000)
 })();
